@@ -11,6 +11,9 @@ pipeline {
             steps {
                 sh 'npm run-script build'
                 echo "Name : ${Name}"
+              echo "apis: ${apis}"
+              echo "version: ${version}"
+              echo "status: ${status}"
             }
       }      
   }
