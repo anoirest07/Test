@@ -13,7 +13,7 @@ pipeline {
         steps {
               sh 'npm run-script build'
           script{
-              def props = readJSON text: '{ "key": "value" }'
+              //def props = readJSON text: '{ "key": "value" }'
             def jsonString = readJSON text: '{name: "${name}"}'
               //v1 = "name": "${name}"
               //echo v1.toString()
