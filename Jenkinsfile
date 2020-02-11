@@ -14,7 +14,7 @@ pipeline {
               sh 'npm run-script build'
           script{
               //def props = readJSON text: '{ "key": "value" }'
-            def jsonString = readJSON text: '{"name": +"${name}"+}'
+            def jsonString = readJSON text: '{ "name": "${name}" }'
             v1 = "${name}"
               echo v1.toString()
               //def jsonObj = readJSON text: jsonString.toString()
