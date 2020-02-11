@@ -14,9 +14,9 @@ pipeline {
               sh 'npm run-script build'
           script{
               //def props = readJSON text: '{ "key": "value" }'
-            def jsonString = readJSON text: '{name: "${name}"}'
-              //v1 = "name": "${name}"
-              //echo v1.toString()
+            def jsonString = readJSON text: '{"name": "${name}"}'
+            v1 = {"name": "${name}"}
+              echo v1.toString()
               //def jsonObj = readJSON text: jsonString.toString()
               echo jsonString.toString()
               //def json = new groovy.json.JsonBuilder()
