@@ -10,14 +10,10 @@ pipeline {
       stage('Build') {              
         steps {
               sh 'npm run-script build'
-              echo "Name : ${Name}"
-              echo "apis: ${apis}"
-              echo "version: ${version}"
-              echo "status: ${status}"
           script{
               def props = readJSON text: '{ "key": "value" }'
-              def jsonString = readJSON text: '{"name":"Test20"}'
-              def jsonObj = readJSON text: jsonString.toString() 
+              def jsonString = writeJSON text: '{"Name : ${Name}","apis: ${apis}","version: ${version}","status: ${status}"}'
+              def jsonObj = writeJSON text: jsonString.toString() 
           }
             }
       }     
