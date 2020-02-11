@@ -4,17 +4,18 @@ import groovy.json.*
 pipeline {
   agent any
   stages {
-      stage('Restore') {
-            steps {
-                sh 'npm install'
-            }
-        }    
+      //stage('Restore') {
+            //steps {
+               // sh 'npm install'
+            //}
+        //}    
       stage('Build') {              
         steps {
               sh 'npm run-script build'
           script{
               def props = readJSON text: '{ "key": "value" }'
-              def jsonString = readJSON text: '{"name": "{$name}"}'
+              def jsonString = readJSON text: '{"name": "${name}"}'
+            echo {"name": "${name}"}
               //def jsonObj = readJSON text: jsonString.toString()
               echo jsonString.toString()
               //def json = new groovy.json.JsonBuilder()
