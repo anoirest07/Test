@@ -12,7 +12,7 @@ pipeline {
         steps {
               sh 'npm run-script build' 
           script{
-              def jsonString = '{"name":"Test20"}'
+              def props = readJSON text: '{"name":"Test20"}'
               def jsonObj = readJSON text: jsonString
           }
               echo "Name : ${Name}"
