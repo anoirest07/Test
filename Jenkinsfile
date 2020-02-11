@@ -1,4 +1,6 @@
 import groovy.json.JsonOutput
+import jenkins.model.*
+jenkins = Jenkins.instance
 pipeline {
   agent any
   stages {
