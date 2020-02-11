@@ -14,9 +14,9 @@ pipeline {
               def props = readJSON text: '{ "key": "value" }'
               def jsonString = readJSON text: '{"Name" : "${Name}","apis": "${apis}","version": "${version}","status": "${status}"}'
               //def jsonObj = readJSON text: jsonString.toString()
-              def json = new groovy.json.JsonBuilder()
+              def json = new JsonBuilder()
               json "element1": jsonString
-              def file = new File("$WORKSPACE/people.json")
+              def file = new File("$WORKSPACE/fichier1.json")
               file.write(groovy.json.JsonOutput.prettyPrint(json.toString()))
           }
             }
