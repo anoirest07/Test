@@ -21,7 +21,7 @@ pipeline {
              // json "element1": jsonString
               //def file = new File("$WORKSPACE/fichier1.json")
               //file.write(groovy.json.JsonOutput.prettyPrint(json.toString()))
-              writeJSON(file:'fichier1.json',json: jsonString)
+              writeJSON(file:'fichier1.json',json:jsonString)
           }
             }
       }     
