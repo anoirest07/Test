@@ -10,10 +10,7 @@ pipeline {
       stage('Build') {
             steps {
                 sh 'npm run-script build'
-                script {
-                  prettyJSON = JsonOutput.prettyPrint(json)
-                  echo("${prettyJSON}")
-                } 
+                echo "Name : ${Name}"
             }
       }      
   }
