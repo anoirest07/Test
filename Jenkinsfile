@@ -1,6 +1,4 @@
 import groovy.json.JsonOutput
-import jenkins.model.*
-jenkins = Jenkins.instance
 pipeline {
   agent any
   stages {
@@ -11,15 +9,15 @@ pipeline {
         }    
       stage('Build') {              
         steps {
-              sh 'npm run-script build' 
-          script{
-              def props = readJSON text: '{"name":"Test20"}'
-              def jsonObj = readJSON text: jsonString
-          }
+              sh 'npm run-script build'
               echo "Name : ${Name}"
               echo "apis: ${apis}"
               echo "version: ${version}"
               echo "status: ${status}"
+          script{
+              def props = readJSON text: '{"name":"Test20"}'
+              def jsonObj = readJSON text: jsonString
+          }
             }
       }     
   }
