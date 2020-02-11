@@ -1,4 +1,3 @@
-import groovy.json.JsonOutput
 pipeline {
   agent any
   stages {
@@ -7,17 +6,18 @@ pipeline {
                 sh 'npm install'
             }
         }
+    node(){
       stage('Build') {
-            steps {
-              sh 'npm run-script build'
-              node{
-              def data = readJSON file:'fichier.json'
-              }
-              echo "Name : ${Name}"
+        def jsonString = '{"name":"Test20"}'
+        def jsonObj = readJSON text: jsonString
+        echo "Name : ${Name}"
               echo "apis: ${apis}"
               echo "version: ${version}"
               echo "status: ${status}"
+            steps {
+              sh 'npm run-script build'              
             }
-      }      
+      } 
+    }
   }
 }
