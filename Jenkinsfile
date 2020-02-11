@@ -15,7 +15,7 @@ pipeline {
           script{
               def props = readJSON text: '{ "key": "value" }'
               def jsonString = readJSON text: '{"name": "${name}"}'
-            echo {"name": "${name}"}
+            echo "name":"${name}"
               //def jsonObj = readJSON text: jsonString.toString()
               echo jsonString.toString()
               //def json = new groovy.json.JsonBuilder()
