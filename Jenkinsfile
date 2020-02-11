@@ -15,7 +15,8 @@ pipeline {
               echo "version: ${version}"
               echo "status: ${status}"
           script{
-              def props = readJSON text: '{"name":"Test20"}'
+              def props = readJSON text: '{ "key": "value" }'
+              def jsonString  = readJSON text: '{"name":"Test20"}'
               def jsonObj = readJSON text: jsonString
           }
             }
