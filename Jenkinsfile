@@ -1,3 +1,4 @@
+import groovy.json.JsonOutput
 pipeline {
   agent any
   stages {
@@ -9,7 +10,10 @@ pipeline {
       stage('Build') {
             steps {
                 sh 'npm run-script build'
-                junit 'reports/**/*.json'
+                script {
+                  prettyJSON = JsonOutput.prettyPrint(json)
+                  echo("${prettyJSON}")
+                } 
             }
       }      
   }
