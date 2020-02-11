@@ -19,7 +19,7 @@ pipeline {
               v1 = "${name}"
               echo v1.toString()
               //def jsonObj = readJSON text: jsonString.toString()
-              echo jsonString.name.toString()
+             // echo jsonString.name.toString()
               //def json = new groovy.json.JsonBuilder()
              // json "element1": jsonString
               //def file = new File("$WORKSPACE/fichier1.json")
