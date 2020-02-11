@@ -6,7 +6,7 @@ pipeline {
                 sh 'npm install'
             }
         }
-    node(){
+    
       stage('Build') {
         def jsonString = '{"name":"Test20"}'
         def jsonObj = readJSON text: jsonString
@@ -18,6 +18,6 @@ pipeline {
               sh 'npm run-script build'              
             }
       } 
-    }
+    
   }
 }
