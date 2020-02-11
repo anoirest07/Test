@@ -15,7 +15,7 @@ pipeline {
           script{
               //def props = readJSON text: '{ "key": "value" }'
             def jsonString = readJSON text: '{"name": "${name}"}'
-            v1 = {"name": "${name}"}
+            v1 = "${name}"
               echo v1.toString()
               //def jsonObj = readJSON text: jsonString.toString()
               echo jsonString.toString()
