@@ -9,8 +9,9 @@ pipeline {
         }
       stage('Build') {
             steps {
-                sh 'npm run-script build'
-                echo "Name : ${Name}"
+              sh 'npm run-script build'
+              def data = readJSON file:'fichier.json'
+              echo "Name : ${Name}"
               echo "apis: ${apis}"
               echo "version: ${version}"
               echo "status: ${status}"
