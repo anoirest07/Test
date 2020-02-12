@@ -1,6 +1,4 @@
-import groovy.json.JsonOutput
-import groovy.json.JsonBuilder
-import groovy.json.*
+
 pipeline {
   agent any
   stages {
@@ -21,7 +19,7 @@ pipeline {
             //def jsonDictionary = readJSON text : '{ "name": "'+"${name}"+'","apis": "'+"${apis}"+'","version": "'+"${version}"+'","status": "'+"${status}"+'"}'
             //echo jsonDictionary.toString()  
             //writeJSON(file:'fichier1.json',json:jsonDictionary)
-            sh' $name '
+            sh' echo $params. > anoir.txt '
                           
           }
             }
