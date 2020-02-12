@@ -18,9 +18,10 @@ pipeline {
               //writeJSON(file:'fichier1.json',json:jsonString)
               //v1 = "${name}"
               //echo v1.toString()
-            def jsonDictionary = readJSON text : '{ "name": "'+"${name}"+'","apis": "'+"${apis}"+'","version": "'+"${version}"+'","status": "'+"${status}"+'"}'
-            echo jsonDictionary.toString()  
-            writeJSON(file:'fichier1.json',json:jsonDictionary)
+            //def jsonDictionary = readJSON text : '{ "name": "'+"${name}"+'","apis": "'+"${apis}"+'","version": "'+"${version}"+'","status": "'+"${status}"+'"}'
+            //echo jsonDictionary.toString()  
+            //writeJSON(file:'fichier1.json',json:jsonDictionary)
+            sh'echo $0 $1 $2 $3'
                           
           }
             }
