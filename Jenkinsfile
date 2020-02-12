@@ -21,7 +21,7 @@ pipeline {
             //def jsonDictionary = readJSON text : '{ "name": "'+"${name}"+'","apis": "'+"${apis}"+'","version": "'+"${version}"+'","status": "'+"${status}"+'"}'
             //echo jsonDictionary.toString()  
             //writeJSON(file:'fichier1.json',json:jsonDictionary)
-            sh'$1'
+            sh'" $0" '
                           
           }
             }
