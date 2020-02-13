@@ -7,14 +7,7 @@ pipeline {
           sh 'npm install'
             }
         }
-      stage('prepare') {
-        steps {
-          script {
-            echo "-- Clean workspace before doing anything : "
-            cleanWs notFailBuild: true
-          }
-        }
-      }
+      
       stage('Pull') {
         steps{
           script{
