@@ -2,6 +2,14 @@
 pipeline {
   agent any
     stages {
+      stage('prepare'){
+      steps {
+        script {
+          echo "-- Clean workspace before doing anything : "
+          cleanWs notFailBuild: true
+        }
+      }
+    }
       stage('Build') {              
         steps {
               //sh 'npm run-script build'
