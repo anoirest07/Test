@@ -9,17 +9,9 @@ pipeline {
         //}    
       stage('Build') {              
         steps {
-              sh 'npm run-script build'
+              //sh 'npm run-script build'
           script{
-              //def jsonString = readJSON text : '{ "name": "'+"${name}"+'","apis": "'+"${apis}"+'","version": "'+"${version}"+'","status": "'+"${status}"+'"}'
-              //echo jsonString.toString()
-              //writeJSON(file:'fichier1.json',json:jsonString)
-              //v1 = "${name}"
-              //echo v1.toString()
-            //def jsonDictionary = readJSON text : '{ "name": "'+"${name}"+'","apis": "'+"${apis}"+'","version": "'+"${version}"+'","status": "'+"${status}"+'"}'
-            //echo jsonDictionary.toString()  
-            //writeJSON(file:'fichier1.json',json:jsonDictionary)
-            sh' echo $params. > anoir.txt '
+              sh " echo name:${params.name},apis:${params.apis} ,version:${params.version},status:${params.status} > fichier.txt"
                           
           }
             }
