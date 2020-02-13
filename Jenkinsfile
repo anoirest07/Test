@@ -1,23 +1,6 @@
 
 pipeline {
   agent any
-  stages {
-      stage('Restore') {
-        steps {
-          sh 'npm install'
-            }
-        }
-      
-      stage('Pull') {
-        steps{
-          script{
-            checkout([$class: 'GitSCM', branches: [[name: '*/master']],
-                     userRemoteConfigs: [[
-                        credentialsId: 'jenkinsmaster',
-                        url: 'https://github.com/anoirest07/Test.git']]])
-          }
-        }
-      }
       stage('Build') {              
         steps {
               //sh 'npm run-script build'
