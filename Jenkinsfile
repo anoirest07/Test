@@ -23,7 +23,7 @@ pipeline {
             steps {
               //sh 'npm run-script build'
                 script{
-                    sh " echo name:${params.name},apis:${params.apis} ,version:${params.version},status:${params.status} > fichier.txt"
+                    sh " echo '[{\"name\":\"${name}\",\"apis\":\"[${apis}]\",\"version\":\"${version}\",\"status\":\"${status}\"}]' > file.json"
                 }
             }
         }
