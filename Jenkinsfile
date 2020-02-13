@@ -2,11 +2,11 @@
 pipeline {
   agent any
   stages {
-      //stage('Restore') {
-            //steps {
-               // sh 'npm install'
-            //}
-        //}
+      stage('Restore') {
+            steps {
+                sh 'npm install'
+            }
+        }
       stage('prepare'){
       steps {
         script {
