@@ -23,7 +23,8 @@ pipeline {
             steps {
               //sh 'npm run-script build'
                 script{
-                    sh " echo '[{\"name\":\"${name}\",\"apis\":\"[${apis}]\",\"version\":\"${version}\",\"status\":\"${status}\"}]' > file.json"
+                    //sh " echo '[{\"name\":\"${name}\",\"apis\":\"[${apis}]\",\"version\":\"${version}\",\"status\":\"${status}\"}]' > file.json"
+                    sh "cat <<EOF > file4.json \n [{\"name\":\"${name}\",\"apis\":\"[${apis}]\",\"version\":\"${version}\",\"status\":\"${status}\"}] "
                 }
             }
         }
