@@ -14,7 +14,7 @@ pipeline {
                 script{
                     checkout([$class: 'GitSCM', branches: [[name: '*/master']],
                         userRemoteConfigs: [[
-                            credentialsId: 'jenkinsmaster',
+                            //credentialsId: 'jenkinsmaster',
                             url: 'https://github.com/anoirest07/Test.git']]])
                 }
             }
@@ -24,7 +24,9 @@ pipeline {
               //sh 'npm run-script build'
                 script{
                     //sh " echo '[{\"name\":\"${name}\",\"apis\":\"[${apis}]\",\"version\":\"${version}\",\"status\":\"${status}\"}]' > file.json"
-                    sh "cat <<EOF > file4.json \n [{\"name\":\"${name}\",\"apis\":\"[${apis}]\",\"version\":\"${version}\",\"status\":\"${status}\"}] "
+                    //sh "cat <<EOF > file4.json \n [{\"name\":\"${name}\",\"apis\":\"[${apis}]\",\"version\":\"${version}\",\"status\":\"${status}\"}] "
+                    sh "cat <<EOF > ${env.WORKSPACE}/src/assets/file4.json \n [{\"name\":\"${name}\",\"apis\":\"${apis}\",\"version\":\"${version}\",\"status\":\"${status}\"}] "
+                    //sh "echo '${params.apis}'"
                 }
             }
         }
