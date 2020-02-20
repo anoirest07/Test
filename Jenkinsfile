@@ -27,8 +27,7 @@ pipeline {
                     //sh "cat <<EOF > file4.json \n [{\"name\":\"${name}\",\"apis\":\"[${apis}]\",\"version\":\"${version}\",\"status\":\"${status}\"}] "
                     //sh "cat <<EOF > ${env.WORKSPACE}/src/assets/file4.json \n [{\"name\":\"${name}\",\"apis\":\"${apis}\",\"version\":\"${version}\",\"status\":\"${status}\"}] "
                     //sh "echo '${params.apis}'"
-                  jobvars='${name}'
-                  sh './test.sh ${jobvars}'
+                  sh './test.sh ${params}'
                 }
             }
         }
