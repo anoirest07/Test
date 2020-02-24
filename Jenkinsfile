@@ -1,14 +1,14 @@
 pipeline {
   agent any
     stages {
-        stage('prepare'){
-            steps {
-                script {
+        //stage('prepare'){
+            //steps {
+                //script {
                     //echo "-- Clean workspace before doing anything : "
                     //cleanWs notFailBuild: true
-                }
-            }
-        }
+                //}
+            //}
+        //}
         stage('Pull') {
              steps{
                 script{
@@ -19,18 +19,18 @@ pipeline {
                 }
             }
         }
-        stage('Build') {              
-            steps {
+        //stage('Build') {              
+            //steps {
               //sh 'npm run-script build'
-                script{
+                //script{
                     //sh " echo '[{\"name\":\"${name}\",\"apis\":\"[${apis}]\",\"version\":\"${version}\",\"status\":\"${status}\"}]' > file.json"
                     //sh "cat <<EOF > file4.json \n [{\"name\":\"${name}\",\"apis\":\"[${apis}]\",\"version\":\"${version}\",\"status\":\"${status}\"}] "
                     //sh "cat <<EOF > ${env.WORKSPACE}/src/assets/file4.json \n [{\"name\":\"${name}\",\"apis\":\"${apis}\",\"version\":\"${version}\",\"status\":\"${status}\"}] "
                     //sh "echo '${params.apis}'"
                   //sh './test.sh ${params}'
-                }
-            }
-        }
+                //}
+            //}
+        //}
     }
 }
 
