@@ -19,18 +19,19 @@ pipeline {
                 }
             }
         }
-        //stage('Build') {              
-            //steps {
+        stage('Build') {              
+            steps {
               //sh 'npm run-script build'
-                //script{
+                script{
                     //sh " echo '[{\"name\":\"${name}\",\"apis\":\"[${apis}]\",\"version\":\"${version}\",\"status\":\"${status}\"}]' > file.json"
                     //sh "cat <<EOF > file4.json \n [{\"name\":\"${name}\",\"apis\":\"[${apis}]\",\"version\":\"${version}\",\"status\":\"${status}\"}] "
                     //sh "cat <<EOF > ${env.WORKSPACE}/src/assets/file4.json \n [{\"name\":\"${name}\",\"apis\":\"${apis}\",\"version\":\"${version}\",\"status\":\"${status}\"}] "
                     //sh "echo '${params.apis}'"
                   //sh './test.sh ${params}'
-                //}
-            //}
-        //}
+                    sh "./test.sh ${RCD_VERSION} ${RCD_PILOTE_VERSION} ${PTF_NAME} ${RCD_APIS} ${EVOL_SUFFIX} ${BASE_SUFFIX}"
+                }
+            }
+        }
     }
 }
 
