@@ -4,8 +4,8 @@ pipeline {
         stage('prepare'){
             steps {
                 script {
-                    echo "-- Clean workspace before doing anything : "
-                    cleanWs notFailBuild: true
+                    //echo "-- Clean workspace before doing anything : "
+                    //cleanWs notFailBuild: true
                 }
             }
         }
@@ -27,7 +27,7 @@ pipeline {
                     //sh "cat <<EOF > file4.json \n [{\"name\":\"${name}\",\"apis\":\"[${apis}]\",\"version\":\"${version}\",\"status\":\"${status}\"}] "
                     //sh "cat <<EOF > ${env.WORKSPACE}/src/assets/file4.json \n [{\"name\":\"${name}\",\"apis\":\"${apis}\",\"version\":\"${version}\",\"status\":\"${status}\"}] "
                     //sh "echo '${params.apis}'"
-                  sh './test.sh ${params}'
+                  //sh './test.sh ${params}'
                 }
             }
         }
