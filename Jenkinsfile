@@ -14,7 +14,7 @@ pipeline {
       stage('Ansible') {              
             steps {         
                 script{
-                   sh "ansible-playbook /etc/ansible/project-CRMGP/playbook.yml \
+                  sh "ansible-playbook /etc/ansible/project-CRMGP/playbook.yml \
                   -e RCD_VERSION=\"${RCD_VERSION}\"\
                   -e RCD_PILOTE_VERSION=\"${RCD_PILOTE_VERSION}\"\
                   -e RCD_APIS=\"${RCD_APIS}\"\
@@ -28,8 +28,7 @@ pipeline {
                   -e DOLLARU_SCRIPTS=\"${DOLLARU_SCRIPTS}\"\
                   -e NGINX_CONF=\"${NGINX_CONF}\"\
                   -e MEM_LIMIT=\"${MEM_LIMIT}\"\ 
-                  -e INCLUDE_AUDIT_LCRI=\"${INCLUDE_AUDIT_LCRI}\""
-                  
+                  -e INCLUDE_AUDIT_LCRI=\"${INCLUDE_AUDIT_LCRI}\""  
                 }
             }
         }
