@@ -14,7 +14,22 @@ pipeline {
       stage('Ansible') {              
             steps {         
                 script{
-                   sh "ansible-playbook --extra-vars '{${RCD_VERSION} ${RCD_PILOTE_VERSION} ${RCD_APIS} ${BAD3_INSTANCE} ${PTF} ${Salle} ${DEPL_VERSION} ${DEPL_MODE} ${EVOL_SUFFIX} ${BASE_SUFFIX} ${DOLLARU_SCRIPTS} ${NGINX_CONF} ${MEM_LIMIT} ${INCLUDE_AUDIT_LCRI}}' /etc/ansible/project-CRMGP/playbook.yml"
+                   sh "ansible-playbook /etc/ansible/project-CRMGP/playbook.yml \
+                  -e RCD_VERSION=\"${RCD_VERSION}\"\
+                  -e RCD_PILOTE_VERSION=\"${RCD_PILOTE_VERSION}\"\
+                  -e RCD_APIS=\"${RCD_APIS}\"\
+                  -e BAD3_INSTANCE=\"${BAD3_INSTANCE}\"\
+                  -e PTF=\"${PTF}\"\
+                  -e Salle=\"${Salle}\"\
+                  -e DEPL_VERSION=\"${DEPL_VERSION}\"\
+                  -e DEPL_MODE=\"${DEPL_MODE}\"\
+                  -e EVOL_SUFFIX=\"${EVOL_SUFFIX}\"\
+                  -e BASE_SUFFIX=\"${BASE_SUFFIX}\"\
+                  -e DOLLARU_SCRIPTS=\"${DOLLARU_SCRIPTS}\"\
+                  -e NGINX_CONF=\"${NGINX_CONF}\"\
+                  -e MEM_LIMIT=\"${MEM_LIMIT}\"\ 
+                  -e INCLUDE_AUDIT_LCRI=\"${INCLUDE_AUDIT_LCRI}\"\ "
+                  
                 }
             }
         }
