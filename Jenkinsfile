@@ -26,8 +26,7 @@ pipeline {
                   -e EVOL_SUFFIX=\"${EVOL_SUFFIX}\"\
                   -e BASE_SUFFIX=\"${BASE_SUFFIX}\"\
                   -e DOLLARU_SCRIPTS=\"${DOLLARU_SCRIPTS}\"\
-                  -e NGINX_CONF=\"${NGINX_CONF}\"\
-                  -e MEM_LIMIT=\"${MEM_LIMIT}\"\ 
+                  -e NGINX_CONF=\"${NGINX_CONF}\"\ 
                   -e INCLUDE_AUDIT_LCRI=\"${INCLUDE_AUDIT_LCRI}\""  
                 }
             }
