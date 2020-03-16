@@ -14,20 +14,7 @@ pipeline {
       stage('Ansible') {              
             steps {         
                 script{
-                  sh "ansible-playbook /etc/ansible/project-CRMGP/playbook.yml \
-                  -e RCD_VERSION=\"${RCD_VERSION}\" \
-                  -e RCD_PILOTE_VERSION=\"${RCD_PILOTE_VERSION}\" \
-                  -e RCD_APIS=\"${RCD_APIS}\"\
-                  -e BAD3_INSTANCE=\"${BAD3_INSTANCE}\" \
-                  -e PTF=\"${PTF}\"\
-                  -e Salle=\"${Salle}\"\
-                  -e DEPL_VERSION=\"${DEPL_VERSION}\" \
-                  -e DEPL_MODE=\"${DEPL_MODE}\" \
-                  -e EVOL_SUFFIX=\"${EVOL_SUFFIX}\" \ 
-                  -e BASE_SUFFIX=\"${BASE_SUFFIX}\" \
-                  -e DOLLARU_SCRIPTS=\"${DOLLARU_SCRIPTS}\" \
-                  -e NGINX_CONF=\"${NGINX_CONF}\" \ 
-                  -e INCLUDE_AUDIT_LCRI=\"${INCLUDE_AUDIT_LCRI}\" "  
+                  sh "ansible-playbook /etc/ansible/project-CRMGP/playbook.yml -e RCD_VERSION=\"${RCD_VERSION}\""  
                 }
             }
         }
