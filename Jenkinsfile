@@ -28,7 +28,7 @@ pipeline {
                   -e DOLLARU_SCRIPTS=\"${DOLLARU_SCRIPTS}\"\
                   -e NGINX_CONF=\"${NGINX_CONF}\"\
                   -e MEM_LIMIT=\"${MEM_LIMIT}\"\ 
-                  -e INCLUDE_AUDIT_LCRI=\"${INCLUDE_AUDIT_LCRI}\"\ "
+                  -e INCLUDE_AUDIT_LCRI=\"${INCLUDE_AUDIT_LCRI}\""
                   
                 }
             }
