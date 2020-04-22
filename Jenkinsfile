@@ -18,7 +18,7 @@ pipeline {
               stage('Starting CRMGP job') {              
            steps {         
                 script{
-                   build job: 'CRMGP', parameters: ["${RCD_VERSION}" "${RCD_PILOTE_VERSION}" "${RCD_APIS}" "${BAD3_INSTANCE}" "${PTF}" "${Salle}" "${DEPL_VERSION}" "${DEPL_MODE}" "${EVOL_SUFFIX}" "${BASE_SUFFIX}" "${DOLLARU_SCRIPTS}" "${NGINX_CONF}" "${MEM_LIMIT}" "${INCLUDE_AUDIT_LCRI}" "${DEPLOY_APP}"] , , wait: false
+                   build job: 'CRMGP', parameters: [[$class: 'StringParameterValue', name: 'RCD_VERSION', value: "${RCD_VERSION}"],[$class: 'StringParameterValue', name: 'RCD_PILOTE_VERSION', value: "${RCD_PILOTE_VERSION}"],[$class: 'StringParameterValue', name: 'RCD_APIS', value: "${RCD_APIS}"],[$class: 'StringParameterValue', name: 'BAD3_INSTANCE', value: "${BAD3_INSTANCE}"],[$class: 'StringParameterValue', name: 'PTF', value: "${PTF}"],[$class: 'StringParameterValue', name: 'Salle', value: "${Salle}"],[$class: 'StringParameterValue', name: 'DEPL_VERSION', value: "${DEPL_VERSION}"],[$class: 'StringParameterValue', name: 'DEPL_MODE', value: "${DEPL_MODE}"],[$class: 'StringParameterValue', name: 'EVOL_SUFFIX', value: "${EVOL_SUFFIX}"],[$class: 'StringParameterValue', name: 'BASE_SUFFIX', value: "${BASE_SUFFIX}"],[$class: 'StringParameterValue', name: 'DOLLARU_SCRIPTS', value: "${DOLLARU_SCRIPTS}"],[$class: 'StringParameterValue', name: 'NGINX_CONF', value: "${NGINX_CONF}"],[$class: 'StringParameterValue', name: 'MEM_LIMIT', value: "${MEM_LIMIT}"],[$class: 'StringParameterValue', name: 'INCLUDE_AUDIT_LCRI', value: "${INCLUDE_AUDIT_LCRI}"],[$class: 'StringParameterValue', name: 'DEPLOY_APP', value: "${DEPLOY_APP}"]]
                 }
             }
         }
