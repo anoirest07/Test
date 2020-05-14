@@ -21,9 +21,10 @@ pipeline {
         //}           
       stage('replace espace par virgule'){
         steps{
-
+          script {
                         description = DESCRIPTION.replaceAll(~/ /, ",")
                         echo description
+          }
         }
       }
               stage('Starting CRMGP job') {              
