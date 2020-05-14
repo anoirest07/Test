@@ -15,15 +15,15 @@ pipeline {
               //     sh "./script_file.sh ${RCD_VERSION} ${RCD_PILOTE_VERSION} ${RCD_APIS} ${BAD3_INSTANCE} ${PTF} ${Salle} ${DEPL_VERSION} ${DEPL_MODE} ${EVOL_SUFFIX} ${BASE_SUFFIX} ${DOLLARU_SCRIPTS} ${NGINX_CONF} ${MEM_LIMIT} ${INCLUDE_AUDIT_LCRI}"
                 //}
             //}
-        //}           
+        //}    
+      node ('Nodename') {
       stage('replace espace par virgule'){
-        steps{
-          script {
+        
                         def description = ""
                         def DESCRIPTION = "${DESCRIPTION}"
                         description = DESCRIPTION.replaceAll(~/ /, ",")
                         echo description
-          }
+          
         }
       }
               stage('Starting CRMGP job') {              
