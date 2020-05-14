@@ -16,14 +16,15 @@ pipeline {
                 //}
             //}
         //}    
-      node ('Nodename') {
+     
       stage('replace espace par virgule'){
-        
+        steps{
+          script{
                         def description = ""
                         def DESCRIPTION = "${DESCRIPTION}"
-                        description = DESCRIPTION.replaceAll(~/ /, ",")
+                        description = shout  DESCRIPTION.replace (' ', ',')
                         echo description
-          
+          }
         }
       }
               stage('Starting CRMGP job') {              
