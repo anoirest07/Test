@@ -17,7 +17,7 @@ pipeline {
         //}
                         def description = ""
                         def DESCRIPTION = "${DESCRIPTION}"
-                        description = DESCRIPTION.replace("\ ", ",")
+                        description = DESCRIPTION.replaceAll(~/ /, ",")
                         echo description
       
               stage('Starting CRMGP job') {              
