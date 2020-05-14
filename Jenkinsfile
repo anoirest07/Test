@@ -22,7 +22,7 @@ pipeline {
           script{
                         def description = ""
                         def DESCRIPTION = "${DESCRIPTION}"
-                        description = shout  DESCRIPTION.replace (' ', ',')
+                        description =  DESCRIPTION.replace (' ', ',')
                         echo description
           }
         }
