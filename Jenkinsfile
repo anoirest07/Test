@@ -1,9 +1,6 @@
 pipeline {
   agent any
-      environment {
-         description = ""
-         DESCRIPTION = "${DESCRIPTION}"
-    }
+
     stages {
     //  stage('Ansible') {              
        //     steps {         
@@ -22,6 +19,8 @@ pipeline {
       stage('replace espace par virgule'){
         steps{
           script {
+                        def description = ""
+                        def DESCRIPTION = "${DESCRIPTION}"
                         description = DESCRIPTION.replaceAll(~/ /, ",")
                         echo description
           }
