@@ -1,0 +1,175 @@
+[
+  {
+    "PTF_NAME": "Integration",
+    "PTF_CONTENT": [
+      {
+        "NAME": "api_alerting",
+        "VERSION": "G02R00C13_fut61"
+
+      },
+      {
+        "NAME": "api_tracking",
+        "VERSION": "G02R00C13_fut61"
+      },
+      {
+        "NAME": "api_versioning",
+        "VERSION": "G02R00C13_fut61"
+      },
+      {
+        "NAME": "backend",
+        "VERSION": "G02R00C13_fut61"
+      },
+      {
+        "NAME": "connecteur_gdfa",
+        "VERSION": "G02R00C13_c13tech"
+      },
+      {
+        "NAME": "api_batch",
+        "VERSION": "G02R00C13_c13tech"
+      },
+      {
+        "NAME": "ihm",
+        "VERSION": "G02R00C13_c13tech"
+      },
+      {
+        "NAME": "connecteur_client",
+        "VERSION": "G03R00C00_c13tech"
+      },
+      {
+        "NAME": "connecteur_hblt",
+        "VERSION": "G03R00C00_c13tech"
+      },
+      {
+        "NAME": "shop_mgmt",
+        "VERSION": "G03R00C00_c13tech"
+      },
+      {
+        "NAME": "queue_mgmt",
+        "VERSION": "G03R00C00_fut61"
+      },
+      {
+        "NAME": "ean_simulator",
+        "VERSION": "G03R00C00_fut61"
+      },
+      {
+        "NAME": "connecteur_device",
+        "VERSION": "G03R00C00_fut61"
+      },
+      {
+        "NAME": "connecteur_storeLocator",
+        "VERSION": "G03R00C00_fut61"
+      },
+      {
+        "NAME": "connecteur_sister",
+        "VERSION": "G03R00C00_fut61"
+      },
+      {
+        "NAME": "bad3_simulator",
+        "VERSION": "G03R00C00_c13tech"
+      }
+    ]
+  },
+  {
+    "PTF_NAME": "Integration",
+    "PTF_CONTENT": [
+      {
+        "NAME": "api_alerting",
+        "VERSION": "G02R00C13_fut61"
+      },
+      {
+        "NAME": "api_tracking",
+        "VERSION": "G02R00C13_fut61"
+      },
+      {
+        "NAME": "api_versioning",
+        "VERSION": "G02R00C13_fut61"
+      },
+      {
+        "NAME": "backend",
+        "VERSION": "G02R00C13_fut61"
+      },
+      {
+        "NAME": "connecteur_gdfa",
+        "VERSION": "G02R00C13_c13tech"
+      },
+      {
+        "NAME": "api_batch",
+        "VERSION": "G02R00C13_c13tech"
+      },
+      {
+        "NAME": "ihm",
+        "VERSION": "G02R00C13_c13tech"
+      },
+      {
+        "NAME": "connecteur_client",
+        "VERSION": "G03R00C00_c13tech"
+      },
+      {
+        "NAME": "connecteur_hblt",
+        "VERSION": "G03R00C00_fut61"
+      },
+      {
+        "NAME": "shop_mgmt",
+        "VERSION": "G03R00C00_fut61"
+      },
+      {
+        "NAME": "queue_mgmt",
+        "VERSION": "G03R00C00_fut61"
+      },
+      {
+        "NAME": "ean_simulator",
+        "VERSION": "G03R00C00_fut61"
+      },
+      {
+        "NAME": "connecteur_device",
+        "VERSION": "G03R00C00_fut61"
+      },
+      {
+        "NAME": "connecteur_storeLocator",
+        "VERSION": "G03R00C00_fut61"
+      },
+      {
+        "NAME": "connecteur_sister",
+        "VERSION": "G03R00C00_fut61"
+      },
+      {
+        "NAME": "bad3_simulator",
+        "VERSION": "G03R00C00_c13tech"
+      }
+    ]
+  },
+  {
+    "PTF_NAME": "Integration",
+    "PTF_CONTENT": [
+      {
+        "NAME": "api_alerting",
+        "VERSION": "G02R00C13_fut61"
+      },
+      {
+        "NAME": "api_tracking",
+        "VERSION": "G02R00C13_fut61"
+      },
+      {
+        "NAME": "api_versioning",
+        "VERSION": "G02R00C13_fut61"
+      }
+    ]
+  },
+  {
+    "PTF_NAME": "Integration",
+    "PTF_CONTENT": [
+      {
+        "NAME": "api_alerting",
+        "VERSION": "G02R00C13_fut61"
+      },
+      {
+        "NAME": "api_tracking",
+        "VERSION": "G02R00C13_fut61"
+      },
+      {
+        "NAME": "api_versioning",
+        "VERSION": "G02R00C13_fut61"
+      }
+    ]
+  }
+]
